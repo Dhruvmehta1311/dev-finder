@@ -12,6 +12,7 @@ const following = document.getElementById("following");
 const userlocation = document.getElementById("location");
 const twitter_username = document.getElementById("twitter_username");
 const company = document.getElementById("company");
+const profileLink = document.getElementById("profileLink");
 
 search.addEventListener("click", (e) => {
   e.preventDefault();
@@ -34,7 +35,7 @@ async function getUserInfo(user) {
   created_at.innerHTML = createddate.split("T")[0];
 
   bio.innerHTML = data.bio;
-  repoCount.innerHTML = data.repoCount;
+  repoCount.innerHTML = data.public_repos;
 
   followers.innerHTML = data.followers;
 
@@ -45,5 +46,6 @@ async function getUserInfo(user) {
     twitter_username.innerHTML = data.twitter_username;
   }
   company.innerHTML = data.company;
+  profileLink.href = data.html_url;
 
 }
