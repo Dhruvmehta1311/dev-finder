@@ -26,7 +26,7 @@
                 type="text"
                 placeholder="Enter Username here.."
                 id="userInfo"
-                class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:border-blue-500"
+                class="w-full border rounded-md px-4 py-2 focus:outline-none focus:border-blue-500"
               />
             </section>
             <button
@@ -48,56 +48,68 @@
                 alt="Image"
               />
               <!-- class="flex flex-col justify-between gap-1 transition-all sm:w-full sm:flex-row" -->
-              <section class="flex flex-col justify-between gap-1 sm:w-full sm:flex-row">
+              <section
+                class="flex flex-col justify-between gap-1 sm:w-full sm:flex-row"
+              >
                 <div>
                   <h1 id="name">Dhruv</h1>
                   <a
                     id="userLink"
                     target="_blank"
                     href="https://github.com/Dhruvmehta1311/"
-                    ><span id="login">@DhruvMehta1311</span></a
+                    ><span class="text-blue-500  hover:underline text-sm transition-all font-mono" id="login">@DhruvMehta1311</span></a
                   >
                 </div>
                 <p>
-                  <span>Joined</span>
-                  <span id="created_at">05 Feb 2022</span>
+                  <span class="font-mono opacity-60">Joined</span>
+                  <span class="font-mono opacity-60" id="created_at">05 Feb 2022</span>
                 </p>
               </section>
             </section>
-            <p id="bio">Dhruv</p>
+            <p class="opacity-60" id="bio">Bio will Come Here..</p>
             <section>
-              <div class="flex justify-between gap-4 rounded-lg bg-stone-100 min-h-[50px]">
-              <div class="flex flex-col px-4 py-4">
-                <p class="text-xs opacity-60">Repos</p>
-                <p id="repoCount" class=" text-sm font-bold sm:text-base">8</p>
+              <div
+                class="flex justify-between gap-4 rounded-lg bg-stone-100 min-h-[50px]"
+              >
+                <div class="flex flex-col px-4 py-4">
+                  <p class="text-xs opacity-60">Repos</p>
+                  <p id="repoCount" class="text-sm font-bold sm:text-base">8</p>
+                </div>
+                <div class="flex flex-col px-4 py-4">
+                  <p class="text-xs opacity-60">Followers</p>
+                  <p id="followers" class="text-sm font-bold sm:text-base">
+                    1311
+                  </p>
+                </div>
+                <div class="flex flex-col px-4 py-4">
+                  <p class="text-xs opacity-60">Following</p>
+                  <p id="following" class="text-sm font-bold sm:text-base">8</p>
+                </div>
               </div>
-              <div class="flex flex-col px-4 py-4">
-                <p class="text-xs opacity-60">Followers</p>
-                <p id="followers" class=" text-sm font-bold sm:text-base">1311</p>
+              <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                <div class="flex items-center gap-2">
+                  <i class="ri-map-pin-line"></i>
+                  <p id="location">India</p>
+                </div>
+                <div class="flex items-center gap-2">
+                  <i class="ri-link"></i>
+                  <a
+                    id="profileLink"
+                    class="hover:underline opacity-60 max-w-[220px]"
+                    href=""
+                    target="_blank"
+                    >Link to Profile.</a
+                  >
+                </div>
+                <div class="flex items-center gap-2">
+                  <i class="ri-twitter-fill"></i>
+                  <a target="_blank" id="twitter_username" href=""></a>
+                </div>
+                <div class="flex items-center gap-2">
+                  <i class="ri-building-fill"></i>
+                  <p id="company">Finova</p>
+                </div>
               </div>
-              <div class="flex flex-col px-4 py-4">
-                <p class="text-xs opacity-60">Following</p>
-                <p id="following" class=" text-sm font-bold sm:text-base">8</p>
-              </div>
-            </div>
-            <div class="grid grid-cols-1 gap-4  sm:grid-cols-2">
-              <div class="flex items-center gap-2">
-                <i class="ri-map-pin-line"></i>
-                <p id="location">India</p>
-              </div>
-              <div class="flex items-center gap-2">
-                <i class="ri-link"></i>
-                <a id="profileLink" class="hover:underline opacity-60 max-w-[220px]" href="" target="_blank">Link to Profile.</a>
-              </div>
-              <div class="flex items-center gap-2">
-                <i class="ri-twitter-fill"></i>
-                <a target="_blank" id="twitter_username" href=""></a>
-              </div>
-              <div class="flex items-center gap-2">
-                <i class="ri-building-fill"></i>
-                <p id="company">Finova</p>
-              </div>
-            </div>
             </section>
           </main>
         </section>
