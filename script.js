@@ -16,7 +16,7 @@ const profileLink = document.getElementById("profileLink");
 
 search.addEventListener("click", (e) => {
   e.preventDefault();
-  const userNameValue = userName.value;
+  const userNameValue = userName.value.trim();
   getUserInfo(userNameValue);
 });
 
@@ -52,19 +52,17 @@ async function getUserInfo(user) {
     userlocation.innerHTML = data.location;
   }
 
-  if(data.twitter_username === null){
+  if (data.twitter_username === null) {
     twitter_username.href = `https://x.com`;
-      twitter_username.innerHTML = "@twitter";
-  }
-  else{
+    twitter_username.innerHTML = "@twitter";
+  } else {
     twitter_username.href = `https://x.com/${data.twitter_username}`;
-      twitter_username.innerHTML = data.twitter_username;
+    twitter_username.innerHTML = data.twitter_username;
   }
 
   if (data.company === null) {
-    company.innerHTML = "N.A."
-  }
-  else{
+    company.innerHTML = "N.A.";
+  } else {
     company.innerHTML = data.company;
     profileLink.href = data.html_url;
   }
